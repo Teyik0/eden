@@ -51,9 +51,7 @@ const hasFile = (obj: Record<string, any>): boolean => {
                 )
                     return true
             }
-        }
-
-        if (
+        } else if (
             typeof value === 'object' &&
             value !== null &&
             !(value instanceof Date) &&
