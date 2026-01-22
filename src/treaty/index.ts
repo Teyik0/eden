@@ -82,7 +82,7 @@ const flattenObject = (
                     const indexKey = `${newKey}.${i}`
                     if (isFile(item)) {
                         result[indexKey] = item
-                    } else if (typeof item === 'object' && item !== null) {
+                    } else if (typeof item === 'object' && item !== null && !(item instanceof Date)) {
                         Object.assign(result, flattenObject(item, indexKey))
                     } else {
                         result[indexKey] = item
